@@ -19,6 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/fichas-treino")
+@CrossOrigin(origins = "*")
 public class FichaTreinoController {
 
     @Autowired
