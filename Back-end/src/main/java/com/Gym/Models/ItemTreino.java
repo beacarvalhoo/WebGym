@@ -1,5 +1,6 @@
 package com.Gym.Models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,6 +17,7 @@ public class ItemTreino {
 
     @ManyToOne
     @JoinColumn(name = "ficha_id", nullable = false)
+    @JsonIgnore
     private FichaTreino ficha;
 
     @ManyToOne

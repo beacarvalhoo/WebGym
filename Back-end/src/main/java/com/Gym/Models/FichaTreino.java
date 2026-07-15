@@ -3,6 +3,8 @@ package com.Gym.Models;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
 @Table(name = "fichas_treino")
 @Data
@@ -22,4 +24,7 @@ public class FichaTreino {
     @ManyToOne
     @JoinColumn(name = "instrutor_id")
     private Usuario instrutor;
+
+    @OneToMany(mappedBy = "ficha" , cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    private List<ItemTreino> itens;
 }
