@@ -15,6 +15,9 @@ public class Exercicio {
     @Column(nullable = false, unique = true)
     private String nome;
 
+    @Column(name = "url_imagem")
+    private String urlImagem;
+
     @ManyToOne
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;

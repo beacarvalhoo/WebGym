@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Segoe UI", sans-serif;
+}
+
+html {
+  background: #09090b;
+}
+
+body {
+  margin: 0;
+}

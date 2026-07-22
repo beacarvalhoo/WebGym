@@ -18,13 +18,9 @@ public class FichaTreino {
     private String nomeTreino;
 
     @ManyToOne
-    @JoinColumn(name = "aluno_id", nullable = false)
-    private Usuario aluno;
+    @JoinColumn(name = "usuario_id", nullable = false)
+    private Usuario usuario;
 
-    @ManyToOne
-    @JoinColumn(name = "instrutor_id")
-    private Usuario instrutor;
-
-    @OneToMany(mappedBy = "ficha" , cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "ficha", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ItemTreino> itens;
 }
